@@ -141,6 +141,23 @@ reqs(){
   info "$msg"
 }
 
+lint_check_ruff(){
+  info "[lint_check_ruff|in]"
+  _pwd=`pwd`
+
+  cd "$this_folder"
+
+  uv run ruff check
+  local result="$?"
+  if [ ! "$result" -eq "0" ] ; then err "[lint_check_ruff] ruff linter check had issues"; fi
+
+  cd "$_pwd"
+
+  local msg="[lint_check_ruff|out] => ${result}"
+  [[ ! "$result" -eq "0" ]] && info "$msg" && exit 1
+  info "$msg"
+}
+
 unit_test(){
   info "[unit_test|in] ($1)"
 
