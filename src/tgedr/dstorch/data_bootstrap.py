@@ -17,6 +17,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass
 
 
+
 @dataclass(frozen=True)
 class Vocabulary:
     """Immutable vocabulary mapping for text tokenization.
