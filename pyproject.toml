@@ -13,7 +13,8 @@ dependencies = [
     "torch>=2.9.0",
     "pyarrow>=19.0.1",
     "numpy>=2.3.4",
-    "spacy>=3.7.4"
+    "spacy>=3.7.4",
+    "pip>=25.3",
 ]
 [dependency-groups]
 dev = [

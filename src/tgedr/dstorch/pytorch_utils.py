@@ -260,30 +260,30 @@ class SentimentAnalysisNN(nn.Module):
         predictions = self.fc(avg_pool)
         return predictions
 
-    def batch_train(self, epochs: int = 7, device=None) -> float:
-        """Train the model using batch processing.
+    # def batch_train(self, epochs: int = 7, device=None) -> float:
+    #     """Train the model using batch processing.
 
-        Args:
-            epochs: Number of training epochs (default: 7)
-            device: Device to train on (CPU or CUDA), optional
+    #     Args:
+    #         epochs: Number of training epochs (default: 7)
+    #         device: Device to train on (CPU or CUDA), optional
 
-        Returns:
-            Final average loss from the last epoch
+    #     Returns:
+    #         Final average loss from the last epoch
 
-        """
-        if device is not None:
-            self.to(device)
+    #     """
+    #     if device is not None:
+    #         self.to(device)
 
-        for epoch in range(epochs):
-            self.train()
-            running_loss = 0.0
-            for batch in train_iterator:
-                text, labels = batch.text, batch.label
-                optimizer.zero_grad()
-                predictions = model(text).squeeze(1)
-                loss = criterion(predictions, labels)
-                loss.backward()
-                optimizer.step()
-                running_loss += loss.item()
-            average_loss = running_loss / len(train_iterator)
-            print(f"Epoch {epoch + 1}/{epochs}, Loss: {average_loss:.4f}")
+    #     for epoch in range(epochs):
+    #         self.train()
+    #         running_loss = 0.0
+    #         for batch in train_iterator:
+    #             text, labels = batch.text, batch.label
+    #             optimizer.zero_grad()
+    #             predictions = model(text).squeeze(1)
+    #             loss = criterion(predictions, labels)
+    #             loss.backward()
+    #             optimizer.step()
+    #             running_loss += loss.item()
+    #         average_loss = running_loss / len(train_iterator)
+    #         print(f"Epoch {epoch + 1}/{epochs}, Loss: {average_loss:.4f}")

@@ -181,3 +181,4 @@ cython_debug/
 tests-results.xml
 CHANGELOG
 .vscode
+unit-tests-results.xml

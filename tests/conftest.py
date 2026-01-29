@@ -46,3 +46,7 @@ def configure_pandas():
     pd.set_option('display.width', None)
     pd.set_option('display.max_colwidth', 128)
     # Add any other options you need
+
+@pytest.fixture
+def dataset_valuations_url(resources_folder) -> str:
+    return str(Path(resources_folder) / "valuations.csv")
