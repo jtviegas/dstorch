@@ -18,24 +18,6 @@ from dataclasses import dataclass
 
 
 
-@dataclass(frozen=True)
-class Vocabulary:
-    """Immutable vocabulary mapping for text tokenization.
-
-    Provides bidirectional mapping between tokens and their integer IDs.
-
-    Attributes:
-        id2token: List mapping token IDs to token strings.
-        token2id: Dictionary mapping token strings to their IDs.
-    """
-
-    id2token: list[str]
-    token2id: dict[str, int]
-
-    @property
-    def size(self):
-        """Return the total number of tokens in the vocabulary."""
-        return len(self.id2token)
 
 
 class SplitterMixin:

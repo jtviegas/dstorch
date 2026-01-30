@@ -3,8 +3,8 @@ from pathlib import Path
 import pytest
 import pandas as pd
 
-from tgedr.dstorch.model_data import BaseTokenizer, CsvLoader
-from tgedr.dstorch.model_data import ModelData
+from tgedr.dstorch.other.model_data import BaseTokenizer, CsvLoader
+from tgedr.dstorch.other.model_data import ModelData
 
 
 def test_model_data(dataset_valuations_url):

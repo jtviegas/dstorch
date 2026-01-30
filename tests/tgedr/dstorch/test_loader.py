@@ -1,4 +1,4 @@
-from tgedr.dstorch.model_data import CsvLoader
+from tgedr.dstorch.other.model_data import CsvLoader
 
 
 def test_csv_loader(dataset_valuations_url):
