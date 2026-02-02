@@ -22,9 +22,9 @@ jobs:
         java-version: '8'
     - uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
-    - name: install Poetry
-      run: curl -sSL https://install.python-poetry.org | python3 -
+        python-version: '3.12'
+    - name: 'install uv'
+      run: curl -LsSf https://astral.sh/uv/install.sh | sh
     
     - name: 'install qa requirements'
       run: ./helper.sh install_qa_libs

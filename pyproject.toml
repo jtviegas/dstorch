@@ -6,7 +6,7 @@ authors = [
     {name = "developer",email = "developer@email.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 dependencies = [
     "pandas>=2.3.3",
@@ -15,9 +15,13 @@ dependencies = [
     "numpy>=2.3.4",
     "spacy>=3.7.4",
     "pip>=25.3",
+    "tgedr-pycommons>=0.0.7",
+    "scikit-learn>=1.8.0",
+    "transformers>=5.0.0",
 ]
 [dependency-groups]
 dev = [
+    "ipykernel>=7.1.0",
     "pre-commit~=4.2.0",
     "pytest~=8.3.5",
     "pytest-bdd~=8.1.0",
